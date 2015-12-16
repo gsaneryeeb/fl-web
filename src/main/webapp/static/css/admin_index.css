@@ -1,0 +1,257 @@
+/* CSS Document */
+@charset "utf-8";
+
+.tree-block{ 
+       overflow-y: auto;height: 400px;
+       background:url(../images/admin_leftbottom.png) no-repeat bottom left;
+}
+.right_content_to{width:100%; padding:0px 0px 0px 20px; 
+               margin:30px 0px 20px 0px; 
+               clear:both; text-align:left;}
+               
+.no-overflow {
+	overflow: hidden;
+}
+#right_content01 {
+    margin: 20px 0px 0px 20px;
+}
+#diagram {
+	clear: both;
+	margin: 20px 0px;
+}
+
+#diagram_ul {
+	margin: 20px 0px 0px;
+	padding: 0px;
+	clear: both;
+}
+
+#diagram_ul li {
+	float: left;
+}
+
+.diagram_bg01 {
+	width: 96px;
+	height: 90px;
+	background: url(../images/diagram_bg01.jpg) no-repeat;
+	margin: 120px 15px 0px 0px;
+	padding: 3px 0px 0px 5px;
+}
+
+.diagram_content01 {
+	width: 82px;
+	height: 82px;
+	background: url(../images/diagram01.png) no-repeat;
+	margin: 0px;
+	padding: 0px;
+}
+
+.diagram_text01 {
+	width: 71px;
+	height: 25px;
+	background: url(../images/banyuan01.png) no-repeat;
+	margin: 60px 0px 0px 6px;
+	padding: 3px 0px 0px 0px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+#diagram_ul li img {
+	padding: 0px 3px 0px 0px;
+}
+
+.diagram_bg02 {
+	width: 114px;
+	height: 111px;
+	background: url(../images/diagram_bg02.jpg) no-repeat;
+	margin: 0px 100px 0px 20px;
+	padding: 4px 0px 0px 6px;
+}
+
+.diagram_content02 {
+	width: 97px;
+	height: 97px;
+	background: url(../images/diagram02.png) no-repeat;
+	margin: 0px;
+	padding: 65px 0px 0px;
+}
+
+.diagram_text02 {
+	width: 95px;
+	height: 35px;
+	background: url(../images/banyuan02.png) no-repeat;
+	margin: 0px 0px 0px 0px;
+	padding: 3px 0px 0px 0px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.diagram_bg03 {
+	width: 192px;
+	height: 185px;
+	background: url(../images/diagram_bg03.jpg) no-repeat;
+	margin: 0px 0px 0px 100px;
+	padding: 5px 0px 0px 9px;
+}
+
+.diagram_content03 {
+	width: 163px;
+	height: 163px;
+	background: url(../images/diagram03.png) no-repeat;
+	margin: 0px;
+	padding: 112px 0px 0px 6px;
+}
+
+.diagram_text03 {
+	width: 152px;
+	height: 51px;
+	background: url(../images/banyuan03.png) no-repeat;
+	margin: 0px 0px 0px 0px;
+	padding: 20px 0px 0px 0px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.diagram_bg04 {
+	width: 201px;
+	height: 185px;
+	background: url(../images/diagram_bg03.jpg) no-repeat;
+	margin: 20px 25px 0px 0px;
+	padding: 5px 0px 0px 9px;
+}
+
+.diagram_content04 {
+	width: 163px;
+	height: 163px;
+	background: url(../images/diagram04.png) no-repeat;
+	margin: 0px;
+	padding: 112px 0px 0px 6px;
+}
+
+.diagram_text04 {
+	width: 152px;
+	height: 51px;
+	background: url(../images/banyuan03.png) no-repeat;
+	margin: 0px 0px 0px 0px;
+	padding: 20px 0px 0px 0px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.diagram_bg05 {
+	width: 114px;
+	height: 111px;
+	background: url(../images/diagram_bg02.jpg) no-repeat;
+	margin: 0px 30px 0px 130px;
+	padding: 4px 0px 0px 6px;
+}
+
+.diagram_content05 {
+	width: 97px;
+	height: 97px;
+	background: url(../images/diagram05.png) no-repeat;
+	margin: 0px;
+	padding: 65px 0px 0px;
+}
+
+.diagram_content06 {
+	width: 97px;
+	height: 97px;
+	background: url(../images/diagram06.png) no-repeat;
+	margin: 0px;
+	padding: 0px 0px 0px;
+}
+
+.diagram_text06 {
+	width: 95px;
+	height: 35px;
+	background: url(../images/banyuan04.png) no-repeat;
+	margin: 0px 0px 0px 0px;
+	padding: 10px 0px 0px 0px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.diagram_content07 {
+	width: 163px;
+	height: 163px;
+	background: url(../images/diagram07.png) no-repeat;
+	margin: 0px;
+	padding: 112px 0px 0px 6px;
+}
+
+.diagram_content08 {
+	width: 82px;
+	height: 82px;
+	background: url(../images/diagram08.png) no-repeat;
+	margin: 0px;
+	padding: 0px;
+}
+
+#right_content02 {
+	clear: both;
+	margin: 20px 0px 0px 0px;
+}
+
+#advantage_ul {
+	width: 100%;
+	clear: both;
+}
+
+#advantage_ul li {
+	float: left;
+	width: 200px;
+	padding: 10px;
+	margin: 0px 45px 0px 40px;
+	border: #dddddd solid 1px;
+	min-height: 240px;
+	text-align: center;
+}
+
+#advantage_ul li img {
+	margin: 0px auto;
+	width: 74px;
+}
+
+.advantage_title {
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 20px 0px;
+}
+
+.advantage_content {
+	text-align: left;
+	padding: 0px 10px;
+	line-height: 22px;
+}
+
+#advantage_ul .last {
+	margin: 0px 0px 0px 40px;
+}
+
+.left_poptip {
+	background: url(../images/bubble_left.png) no-repeat left top;
+	position: absolute;
+	top: -200px;
+	left: -210px;
+	width: 210px;
+	height: 200px;
+}
+
+.right_poptip {
+	background: url(../images/bubble_right.png) no-repeat left top;
+}
+
+.poptip_title {
+	font-weight: bold;
+	font-size: 12px;
+}
+.ztree li span.button.ico_open{background-position:-110px -96px;}
+.ztree li span.button.ico_close{background-position:-110px -96px;}
+.ztree li span.button.ico_docu{background-position:-110px -48px;}

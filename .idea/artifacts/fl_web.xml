@@ -1,0 +1,77 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="fl-web">
+    <output-path>$PROJECT_DIR$/out/artifacts/fl-web</output-path>
+    <root id="archive" name="fl-web.war">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="fl-web" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="antlr-2.7.7.jar" module-name="fl-web" />
+          <element id="library" level="module" name="aopalliance-1.0.jar" module-name="fl-web" />
+          <element id="library" level="module" name="aspectjrt-1.7.4.jar" module-name="fl-web" />
+          <element id="library" level="module" name="aspectjweaver-1.7.4.jar" module-name="fl-web" />
+          <element id="library" level="module" name="classmate-1.0.0.jar" module-name="fl-web" />
+          <element id="library" level="module" name="com.liferay.org.apache.commons.fileupload-6.2.0.1.jar" module-name="fl-web" />
+          <element id="library" level="module" name="commons-beanutils-1.9.1.jar" module-name="fl-web" />
+          <element id="library" level="module" name="commons-collections-3.2.1.jar" module-name="fl-web" />
+          <element id="library" level="module" name="commons-io-2.4.jar" module-name="fl-web" />
+          <element id="library" level="module" name="commons-lang3-3.1.jar" module-name="fl-web" />
+          <element id="library" level="module" name="commons-logging-1.1.1.jar" module-name="fl-web" />
+          <element id="library" level="module" name="dom4j-1.6.1.jar" module-name="fl-web" />
+          <element id="library" level="module" name="druid-0.2.23.jar" module-name="fl-web" />
+          <element id="library" level="module" name="ehcache-core-2.5.0.jar" module-name="fl-web" />
+          <element id="library" level="module" name="fastjson-1.1.36.jar" module-name="fl-web" />
+          <element id="library" level="module" name="guava-15.0.jar" module-name="fl-web" />
+          <element id="library" level="module" name="h2-1.3.175.jar" module-name="fl-web" />
+          <element id="library" level="module" name="hibernate-commons-annotations-4.0.4.Final.jar" module-name="fl-web" />
+          <element id="library" level="module" name="hibernate-core-4.3.0.Final.jar" module-name="fl-web" />
+          <element id="library" level="module" name="hibernate-entitymanager-4.3.0.Final.jar" module-name="fl-web" />
+          <element id="library" level="module" name="hibernate-jpa-2.1-api-1.0.0.Final.jar" module-name="fl-web" />
+          <element id="library" level="module" name="hibernate-validator-5.0.2.Final.jar" module-name="fl-web" />
+          <element id="library" level="module" name="jackson-core-asl-1.9.9.jar" module-name="fl-web" />
+          <element id="library" level="module" name="jackson-mapper-asl-1.9.9.jar" module-name="fl-web" />
+          <element id="library" level="module" name="jandex-1.1.0.Final.jar" module-name="fl-web" />
+          <element id="library" level="module" name="javassist-3.18.1-GA.jar" module-name="fl-web" />
+          <element id="library" level="module" name="jboss-logging-3.1.3.GA.jar" module-name="fl-web" />
+          <element id="library" level="module" name="jboss-logging-annotations-1.2.0.Beta1.jar" module-name="fl-web" />
+          <element id="library" level="module" name="jboss-transaction-api_1.2_spec-1.0.0.Final.jar" module-name="fl-web" />
+          <element id="library" level="module" name="jcl-over-slf4j-1.7.6.jar" module-name="fl-web" />
+          <element id="library" level="module" name="joda-time-2.3.jar" module-name="fl-web" />
+          <element id="library" level="module" name="jstl-1.2.jar" module-name="fl-web" />
+          <element id="library" level="module" name="log4j-1.2.17.jar" module-name="fl-web" />
+          <element id="library" level="module" name="mysql-connector-java-5.1.9.jar" module-name="fl-web" />
+          <element id="library" level="module" name="security-1.0.0-RELEASE.jar" module-name="fl-web" />
+          <element id="library" level="module" name="shiro-aspectj-1.2.2.jar" module-name="fl-web" />
+          <element id="library" level="module" name="shiro-core-1.2.2.jar" module-name="fl-web" />
+          <element id="library" level="module" name="shiro-ehcache-1.2.2.jar" module-name="fl-web" />
+          <element id="library" level="module" name="shiro-spring-1.2.2.jar" module-name="fl-web" />
+          <element id="library" level="module" name="shiro-web-1.2.2.jar" module-name="fl-web" />
+          <element id="library" level="module" name="sitemesh-2.4.2.jar" module-name="fl-web" />
+          <element id="library" level="module" name="slf4j-api-1.7.5.jar" module-name="fl-web" />
+          <element id="library" level="module" name="slf4j-common-1.7.5.jar" module-name="fl-web" />
+          <element id="library" level="module" name="slf4j-log4j12-1.7.5.jar" module-name="fl-web" />
+          <element id="library" level="module" name="spring-aop-4.0.0.RELEASE.jar" module-name="fl-web" />
+          <element id="library" level="module" name="spring-base-5.0.0.RELEASE.jar" module-name="fl-web" />
+          <element id="library" level="module" name="spring-beans-4.0.0.RELEASE.jar" module-name="fl-web" />
+          <element id="library" level="module" name="spring-context-4.0.0.RELEASE.jar" module-name="fl-web" />
+          <element id="library" level="module" name="spring-context-support-4.0.0.RELEASE.jar" module-name="fl-web" />
+          <element id="library" level="module" name="spring-core-4.0.0.RELEASE.jar" module-name="fl-web" />
+          <element id="library" level="module" name="spring-data-commons-1.7.0.RELEASE.jar" module-name="fl-web" />
+          <element id="library" level="module" name="spring-data-jpa-1.5.0.RELEASE.jar" module-name="fl-web" />
+          <element id="library" level="module" name="spring-expression-4.0.0.RELEASE.jar" module-name="fl-web" />
+          <element id="library" level="module" name="spring-jdbc-4.0.0.RELEASE.jar" module-name="fl-web" />
+          <element id="library" level="module" name="spring-orm-4.0.0.RELEASE.jar" module-name="fl-web" />
+          <element id="library" level="module" name="spring-test-4.0.0.RELEASE.jar" module-name="fl-web" />
+          <element id="library" level="module" name="spring-tx-4.0.0.RELEASE.jar" module-name="fl-web" />
+          <element id="library" level="module" name="spring-web-4.0.0.RELEASE.jar" module-name="fl-web" />
+          <element id="library" level="module" name="spring-webmvc-4.0.0.RELEASE.jar" module-name="fl-web" />
+          <element id="library" level="module" name="standard-1.1.2.jar" module-name="fl-web" />
+          <element id="library" level="module" name="validation-api-1.1.0.Final.jar" module-name="fl-web" />
+          <element id="library" level="module" name="xml-apis-1.0.b2.jar" module-name="fl-web" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="fl-web/web/Web" />
+    </root>
+  </artifact>
+</component>

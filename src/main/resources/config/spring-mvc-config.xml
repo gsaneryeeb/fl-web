@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+	<mvc:annotation-driven/>
+	
+	<context:component-scan base-package="cn.mk.ndms.modules.**.web.controller,cn.mk.ndms.framework.controller" use-default-filters="false">
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+	</context:component-scan>
+	
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="utf-8" />
+        <property name="maxUploadSize" value="104857600"/>
+        <property name="maxInMemorySize" value="4096"/>
+    </bean>
+	
+	<mvc:view-controller path="/" view-name="redirect:/sys/toLogin"/>
+	
+	<mvc:view-controller path="/SYS_ERROR" view-name="redirect:/sys/error"/>
+	
+	<mvc:interceptors >  
+		<mvc:interceptor>  
+	    	<mvc:mapping path="/service/helpdesk/hisPageRole" /> 
+	    	<mvc:mapping path="/service/doorRepairService/hisPageRole"/>
+	        <bean class="cn.mk.ndms.util.FilterRoleInteceptor" />  
+		</mvc:interceptor>  
+		<mvc:interceptor>
+			<mvc:mapping path="/service/repairService/hisPageRole"/>
+	        <bean class="cn.mk.ndms.util.RepairFilterRoleInteceptor" />  
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/part/returnPart/hisPageRole"/>
+	        <bean class="cn.mk.ndms.util.ReturnPartFilterRoleInteceptor" />  
+		</mvc:interceptor>
+		
+		<mvc:interceptor>
+			<mvc:mapping path="/part/storeAdjustment/hisPageRole"/>
+	        <bean class="cn.mk.ndms.util.StoreAdjustmentFilterRoleInteceptor" />  
+		</mvc:interceptor>
+		
+		<mvc:interceptor>  
+	    	<mvc:mapping path="/part/test/hisPageRole" /> 
+	        <bean class="cn.mk.ndms.util.TestFilterRoleInteceptor" />  
+		</mvc:interceptor> 
+	</mvc:interceptors>  
+	
+	<mvc:default-servlet-handler/> 
+	
+	<mvc:resources location="/static/" mapping="/static/**"/>
+    
+    <bean id="defaultViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="contentType" value="text/html"/>
+        <property name="prefix" value="/WEB-INF/view/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+    
+	<bean id="exceptionHandlerExceptionResolver"
+		class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<property name="defaultErrorView">
+			<value>common/error</value>
+		</property>
+		<property name="defaultStatusCode" value="500"/>  
+		<property name="statusCodes">     
+             <props>     
+                 <prop key="common/error">500</prop>     
+                 <prop key="common/error">404</prop>     
+             </props>     
+        </property> 
+        <property name="exceptionMappings">
+			<props>
+				<prop key="java.lang.Exception">common/error</prop>
+				<prop key="java.lang.RuntimeException">common/error</prop>
+			</props>
+		</property>
+	</bean>
+</beans>

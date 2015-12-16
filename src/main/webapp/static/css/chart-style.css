@@ -1,0 +1,22 @@
+@CHARSET "UTF-8";
+
+.graph {
+	border: 1px solid #B1D632;
+	padding: 1px;
+}
+
+.graph .hbar {
+	display: block;
+	background: #B1D632;
+	height: 7px;
+}
+.graph .color1{
+	background: #F1D632;
+}
+.graph .color2 {
+	background: #1FAFF2;
+}
+.graph .hbar span{
+	display: inline;
+}
+

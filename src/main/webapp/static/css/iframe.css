@@ -1,0 +1,28 @@
+/* CSS Document */
+@charset "utf-8";
+body{margin:0px auto;
+	 padding:0px;
+	 font:12px "方正黑体简体",Helvetica,Arial,sans-serif;
+	 color:#515151;}
+div{margin:0px auto; padding:0px; overflow:hidden;}
+ul{margin:0px; padding:0px; list-style:none; overflow:hidden;}
+
+a:link{ color:#515151; text-decoration: none; } 
+a{color:#515151;  text-decoration: none; } 
+a:visited{color:#515151; text-decoration: none; }
+a:hover {color:#c21f08;  text-decoration:none; }
+iframe{border:#c3c3c3 1px solid; overflow:hidden;}
+#iframe_top{width:100%; height:73px; clear:both;}
+.center_rim{ width:1200px; margin:0px auto 0px; clear:both;
+             background:url(../images/page-centerbg.jpg)  repeat-y left top;
+			 overflow:hidden;
+			 padding:0px 0px 10px;}
+#iframe_left{width:201px; float:left; 
+           margin:0px 2px 0px 0px; 
+		   padding:0px 0px 0px 10px;
+		   overflow:hidden;}
+#iframe_right{width:975px; float:left;
+            margin:0px 0px 0px 0px;			
+			padding:0px 0px 0px 0px;
+			overflow:hidden;}
+
