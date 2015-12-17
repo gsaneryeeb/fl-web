@@ -103,7 +103,7 @@ public class DynamicController extends GenericCRUDController<Dynamic, String>
 						dynamicVo.setSysNumber(part.getNumber());
 						dynamicVo.setPartId(s.getPartId());
 						dynamicVo.setParts(s.getPart());
-						dynamicVo.setRack(s.getShelfNo());
+						dynamicVo.setRack(part.getRack());
 						dynamicVo.setInStoreage(s.getIntactQuantity());
 						dynamicVoMap.put(s.getPartId(), dynamicVo);
 					}else{
@@ -121,7 +121,7 @@ public class DynamicController extends GenericCRUDController<Dynamic, String>
 						dynamicVo.setSysNumber(part.getNumber());
 						dynamicVo.setPartId(o.getActualUsePartId());
 						dynamicVo.setParts(o.getActualUsePart());
-						dynamicVo.setRack(o.getShelves());
+						dynamicVo.setRack(part.getRack());
 						dynamicVo.setOutStoreage(o.getUseNumber());
 						dynamicVoMap.put(o.getActualUsePartId(), dynamicVo);
 					}else{

@@ -70,6 +70,12 @@ public class PartController extends GenericCRUDController<Part, String>
 	@ResponseBody
 	public AjaxBean savePartAjax(Part t){
 		try{
+			//初始化备件信息 lock,number,newnumber,oldnumber,wac
+			t.setLocks(0);
+			t.setNumber(0);
+			t.setNewNumber(0);
+			t.setOldNumber(0);
+			t.setWac(t.getPrice());
 			Part tt=partService.save(t);
 			Wac wac=new Wac();
 			wac.setPrice(tt.getPrice());

@@ -484,10 +484,11 @@
 					},
 					success : function(msg) {
 						if(msg.result=="success" || msg.result=="error_sys"){
+							var replaceStr = "0";
 							$.ajax({
 								type : "POST",
 								// upadted by jason
-								url : url+"isRepeats=0",
+								url : url+isRepeats.replace(new RegExp(replaceStr,"gm"),"0"),
 								beforeSend : function() {
 									$("#loading").show();
 								},
@@ -511,11 +512,12 @@
 							});
 						}else{
 							//alert("有重维记录,请单独处理完后,再批量操作!");
+							var replaceStr = "0";
 							if(confirm("重维,是否继续?")){
 								$.ajax({
 									type : "POST",
 									// upadted by jason
-									url : url+"isRepeats=1",
+									url : url+isRepeats.replace(new RegExp(replaceStr,"gm"),"1"),
 									beforeSend : function() {
 										$("#loading").show();
 									},
