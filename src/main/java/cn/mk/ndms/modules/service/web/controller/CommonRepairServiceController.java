@@ -380,6 +380,8 @@ public class CommonRepairServiceController extends GenericCRUDController<CommonR
 					tt.setInventoryNumber(inventoryNumbers[i]);
 					tt.setStatus(Constants.NUMBER_SIGN_3);
 					tt.setUseNumber(tt.getApplyNumber());
+					// 设置出库时间
+					tt.setOperDate(date);
 					p.setNumber(p.getNumber()==null?0:p.getNumber().intValue()-tt.getApplyNumber());
 					//if(Constants.NEW.equals(newOrOld[i])){
 					int c=p.getNewNumber()==null?0-tt.getApplyNumber():p.getNewNumber().intValue()-tt.getApplyNumber();

@@ -31,8 +31,9 @@ public interface OutboundRepository extends GenericRepository<Outbound, String>{
 	
 	@Query("from Outbound c where c.isReturn = 0 and c.returnFlag=1 and c.callno like %?1% and c.station like %?2%")
 	public List<Outbound> findByReturnPart(String search_LIKE_callNo,String search_LIKE_station);
-	
-	@Query("from Outbound c where c.applyDate >=?1 and c.applyDate<=?2 and c.status in (?3)")
+
+	//异动盘点查询条件,按operDate 存储为出库时间
+	@Query("from Outbound c where c.operDate >=?1 and c.operDate<=?2 and c.status in (?3)")
 	public List<Outbound> findByYesterDayAndStatus(String start,String end,List<String> status);
 	
 	@Query("select new cn.mk.ndms.modules.service.web.vo.StationVo(c.id,c.station,c.stationId,c.stationNo,count(*) as amount,c.repairType) from Outbound c where c.status in ('0','2') and c.callno like %?1% and c.station like %?2% group by c.stationId,c.type order by c.stationNo")

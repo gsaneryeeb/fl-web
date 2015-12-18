@@ -19,7 +19,7 @@ import com.springframework.base.entity.BaseEntity;
 public class Outbound extends BaseEntity<String>  {
 	private static final long serialVersionUID = 1L;
 	private String projectIdFk;
-	private String operDate;
+	private String operDate;                // 用于出库时间
 	private String callno;					//CALLNO
 	private String rqNo;					//申请单
 	private String cusName;					//客户姓名

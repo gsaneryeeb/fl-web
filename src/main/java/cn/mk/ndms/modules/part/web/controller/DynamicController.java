@@ -88,9 +88,11 @@ public class DynamicController extends GenericCRUDController<Dynamic, String>
 			outStatus.add(Constants.NUMBER_SIGN_1);
 			outStatus.add(Constants.NUMBER_SIGN_3);
 			outStatus.add(Constants.NUMBER_SIGN_4);
-			
+			//异动入库数
 			List<Storage> storageList=storageService.findByYesterDayAndStatus(startDate,endDate,Constants.NUMBER_SIGN_1);
+			//异动出库数
 			List<Outbound> outboundList=outboundService.findByYesterDayAndStatus(startDate,endDate,outStatus);
+			//异动调拨数
 			List<StoreAdjustment> storeAdjustmentList=storeAdjustmentService.findByYesterDayAndStatus(startDate,endDate,Constants.NUMBER_SIGN_1);
 			Map<String,DynamicVo> dynamicVoMap=new HashMap<String,DynamicVo>();
 			
