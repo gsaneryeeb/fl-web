@@ -99,7 +99,7 @@
 								</tr>
 								<tr>
 									<td>报修故障:</td>
-									<td colspan="3" align="left"><textarea rows="3" cols="80" name="repairFault" id="_repairFault" readonly="readonly">${t.repairFault }</textarea></td>
+									<td colspan="3" align="left"><textarea rows="2" cols="80" name="repairFault" id="_repairFault" readonly="readonly">${t.repairFault }</textarea></td>
 								</tr>
 								<tr>
 									<td width="100%" colspan="4">
@@ -136,7 +136,7 @@
 								</tr>
 								<tr>
 									<td align="left">备    注:</td>
-									<td colspan="3" align="left"><textarea rows="3" cols="80" name="faultHandlingRemark" id="_faultHandlingRemark" readonly="readonly">${t.faultHandlingRemark }</textarea></td>
+									<td colspan="3" align="left"><textarea rows="2" cols="80" name="faultHandlingRemark" id="_faultHandlingRemark" readonly="readonly">${t.faultHandlingRemark }</textarea></td>
 								</tr>
 								<tr id="i1">
 									<td colspan="4" class="success" align="left">故障类型: <input type="checkbox" disabled="disabled" name="_faultType" value="SOFT" <c:if test='${t.faultType=="SOFT"}'> checked="checked"</c:if>>软件服务 <input disabled="disabled" type="checkbox" name="_faultType" value="HARD" <c:if test='${t.faultType=="HARD"}'> checked="checked"</c:if>> 硬件服务<input type="hidden" name="faultType" value="${t.faultType }" id="faultType"><input type="checkbox" name="_faultType" value="SENCEND_REPER" <c:if test='${t.faultType=="SENCEND_REPER"}'> checked="checked"</c:if>>二级维修 </td>
@@ -180,7 +180,7 @@
 								</tr>-->
 								<tr id="i2">
 									<td align="left">处理描述: </td>
-									<td colspan="3" align="left"><textarea rows="3" readonly="readonly" cols="80" name="processDes" id="_processDes">${t.processDes }</textarea></td>
+									<td colspan="3" align="left"><textarea rows="2" readonly="readonly" cols="80" name="processDes" id="_processDes">${t.processDes }</textarea></td>
 								</tr>
 								<tr id="i3">
 									<td align="left" class="success" >费用: </td>
@@ -188,15 +188,16 @@
 								</tr>
 								<tr id="i5">
 									<td width="80%" colspan="4">
-										<div style="float: left;padding-left: 20px;">维修工程师:<input style="border-color: #878787; border-style: solid; border-top-width: 0px;border-right-width: 0px; border-bottom-width: 1px;border-left-width: 0px" ></div>
-										<div style="padding-right: 50px;text-align: right;">用户取机签字:<input style="border-color: #878787; border-style: solid; border-top-width: 0px;border-right-width: 0px; border-bottom-width: 1px;border-left-width: 0px" ></div>
+										<div style="float: left;padding-left: 5px;">维修工程师:<input style="border-color: #878787; border-style: solid; border-top-width: 0px;border-right-width: 0px; border-bottom-width: 1px;border-left-width: 0px" size="10" ></div>
+										<div style="float: left;padding-left: 80px;">用户取机签字:<input style="border-color: #878787; border-style: solid; border-top-width: 0px;border-right-width: 0px; border-bottom-width: 1px;border-left-width: 0px" size="10"></div>
+										<div style="float: right" >日期:<input name="repairDate" class="input-control"  value="${t.repairDate }" readonly="readonly"><span class="glyphicon glyphicon-calendar"></span></div>
 									</td>
 								</tr>
-								<tr id="i6">
+								<!--<tr id="i6">
 									<td width="80%" colspan="4">
-										<div style="text-align: left;padding-left: 20px;">日期:<input name="repairDate" class="input-control"  value="${t.repairDate }" readonly="readonly"><span class="glyphicon glyphicon-calendar"></span></div>
-									</td>
-								</tr>
+									<div style="text-align: left;padding-left: 20px;">日期:<input name="repairDate" class="input-control"  value="${t.repairDate }" readonly="readonly"><span class="glyphicon glyphicon-calendar"></span></div>
+										</td>
+								</tr>-->
 								<tr>
 									<td width="30%">用户反馈信息:</td>
 									<td align="left">
@@ -214,7 +215,7 @@
 											欢迎您留下对我们服务的宝贵意见:<br>
 											<input type="checkbox" value="1" disabled="disabled" <c:if test='${"1"==t.advice }'>checked="checked"</c:if>>非常满意<input type="checkbox" value="2" disabled="disabled" <c:if test='${"2"==t.advice }'>checked="checked"</c:if>>满意<input type="checkbox" value="3" disabled="disabled" <c:if test='${"3"==t.advice }'>checked="checked"</c:if>>一般<input type="checkbox" value="4" disabled="disabled" <c:if test='${"4"==t.advice }'>checked="checked"</c:if>>不满意<input type="checkbox" value="5" disabled="disabled" <c:if test='${"5"==t.advice }'>checked="checked"</c:if>>很不满意
 											<br>
-											不满意原因及其他建议:<textarea rows="3" cols="50" disabled="disabled" name="opinion" id="_opinion">${t.opinion }</textarea>
+											不满意原因及其他建议:<textarea rows="2" cols="50" disabled="disabled" name="opinion" id="_opinion">${t.opinion }</textarea>
 											<br>
 											反馈信息和评价是用户签字时必填项,如果寄修服务可不填.
 											<br>

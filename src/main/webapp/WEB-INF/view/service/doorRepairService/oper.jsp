@@ -302,7 +302,7 @@
 									</td>
 								</tr>
 								<tr>
-									<td align="left">备    注:</td>
+									<td align="left">备    注2:</td>
 									<td colspan="3" align="left"><textarea rows="3" cols="80" name="faultHandlingRemark" id="_faultHandlingRemark">${t.faultHandlingRemark }</textarea></td>
 								</tr>
 								<tr>
@@ -318,15 +318,16 @@
 								</tr>
 								<tr id="i5">
 									<td width="80%" colspan="4">
-										<div style="float: left;padding-left: 20px;">维修工程师:<input style="border-color: #878787; border-style: solid; border-top-width: 0px;border-right-width: 0px; border-bottom-width: 1px;border-left-width: 0px" ></div>
-										<div style="padding-right: 50px;text-align: right;">用户取机签字:<input style="border-color: #878787; border-style: solid; border-top-width: 0px;border-right-width: 0px; border-bottom-width: 1px;border-left-width: 0px" ></div>
+										<div style="float: left;padding-left: 5px;">维修工程师:<input style="border-color: #878787; border-style: solid; border-top-width: 0px;border-right-width: 0px; border-bottom-width: 1px;border-left-width: 0px" ></div>
+										<div style="float: left;padding-left: 80px;">用户取机签字:<input style="border-color: #878787; border-style: solid; border-top-width: 0px;border-right-width: 0px; border-bottom-width: 1px;border-left-width: 0px" ></div>
+										<div style="float: right" >日期:<input name="repairDate" class="input-control"  value="${t.repairDate }" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',maxDate:'%y-%M-%d'})"><span class="glyphicon glyphicon-calendar"></span></div>
 									</td>
 								</tr>
-								<tr id="i6">
+								<!--<tr id="i6">
 									<td width="80%" colspan="4">
 										<div style="text-align: left;padding-left: 20px;">日期:<input name="repairDate" class="input-control"  value="${t.repairDate }" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',maxDate:'%y-%M-%d'})"><span class="glyphicon glyphicon-calendar"></span></div>
 									</td>
-								</tr>
+								</tr>-->
 								<tr>
 									<td width="30%">用户反馈信息:</td>
 									<td align="left">
