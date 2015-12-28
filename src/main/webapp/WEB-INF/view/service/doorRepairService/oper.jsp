@@ -228,7 +228,7 @@
 								</tr>
 								<tr>
 									<td>报修故障:</td>
-									<td colspan="3" align="left"><textarea rows="3" cols="80" name="repairFault" id="_repairFault">${t.repairFault }</textarea></td>
+									<td colspan="3" align="left"><textarea rows="2" cols="80" name="repairFault" id="_repairFault">${t.repairFault }</textarea></td>
 								</tr>
 								<tr>
 									<td width="100%" colspan="4">
@@ -302,15 +302,15 @@
 									</td>
 								</tr>
 								<tr>
-									<td align="left">备    注2:</td>
-									<td colspan="3" align="left"><textarea rows="3" cols="80" name="faultHandlingRemark" id="_faultHandlingRemark">${t.faultHandlingRemark }</textarea></td>
+									<td align="left">备    注:</td>
+									<td colspan="3" align="left"><textarea rows="2" cols="80" name="faultHandlingRemark" id="_faultHandlingRemark">${t.faultHandlingRemark }</textarea></td>
 								</tr>
 								<tr>
 									<td colspan="4" align="left">故障处理: <input type="checkbox" name="_faultHandling" value="1" <c:if test='${t.faultHandling==1}'> checked="checked"</c:if>>已修复 <input type="checkbox" name="_faultHandling" value="2" <c:if test='${t.faultHandling==2}'> checked="checked"</c:if>> 未修复 <input type="checkbox" name="_faultHandling" value="3" <c:if test='${t.faultHandling==3}'> checked="checked"</c:if>>客户放弃维修 <input type="hidden" name="faultHandling" value="${t.faultHandling }" id="faultHandling"> </td>
 								</tr>
 								<tr id="i2">
 									<td align="left"><span class="glyphicon glyphicon-asterisk" style="color: RGB(194,31,8)"></span>处理描述: </td>
-									<td colspan="3" align="left"><textarea rows="3" cols="80" name="processDes" id="_processDes">${t.processDes }</textarea></td>
+									<td colspan="3" align="left"><textarea rows="2" cols="80" name="processDes" id="_processDes">${t.processDes }</textarea></td>
 								</tr>
 								<tr id="i3">
 									<td align="left" class="success" ><span class="glyphicon glyphicon-asterisk" style="color: RGB(194,31,8)"></span>费用: </td>
@@ -345,7 +345,7 @@
 											欢迎您留下对我们服务的宝贵意见:<br>
 											<input type="checkbox" name="advice" value="1" <c:if test='${"1"==t.advice }'>checked="checked"</c:if>>非常满意<input type="checkbox" value="2" name="advice" <c:if test='${"2"==t.advice }'>checked="checked"</c:if>>满意<input type="checkbox" value="3" name="advice" <c:if test='${"3"==t.advice }'>checked="checked"</c:if>>一般<input type="checkbox" value="4" name="advice" <c:if test='${"4"==t.advice }'>checked="checked"</c:if>>不满意<input type="checkbox" value="5" name="advice" <c:if test='${"5"==t.advice }'>checked="checked"</c:if>>很不满意
 											<br>
-											不满意原因及其他建议:<textarea rows="3" cols="50" name="opinion" id="_opinion">${t.opinion }</textarea>
+											不满意原因及其他建议:<textarea rows="2" cols="50" name="opinion" id="_opinion">${t.opinion }</textarea>
 											<br>
 											反馈信息和评价是用户签字时必填项,如果寄修服务可不填.
 											<br>
