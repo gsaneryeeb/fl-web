@@ -198,7 +198,7 @@ function change(station){
 									<td  class="success">备注:</td>
 									<td align="left"><input name="faultRemark" value="${t.faultRemark}" class="input-control" id="_faultRemark"></td>
 									<td  class="success"><span class="BJ glyphicon glyphicon-asterisk" style="color: RGB(194,31,8)"></span>服务解决时间:</td>
-									<td align="left"><input id="_solutionTime" name="solutionTime" value="${t.solutionTime}" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})"   class="input-control" id="_solutionTime" ><span class="glyphicon glyphicon-calendar"></span></td>
+									<td align="left"><input id="_solutionTime" name="solutionTime" value="${t.solutionTime}" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})"   class="input-control" ><span class="glyphicon glyphicon-calendar"></span></td>
 								</tr>
 							</tbody>
 						</table>
