@@ -102,6 +102,7 @@ public class DynamicController extends GenericCRUDController<Dynamic, String>
 					if(vo==null){
 						DynamicVo dynamicVo=new DynamicVo();
 						Part part = partService.findOne(s.getPartId());
+						//异动盘点系统数量
 						dynamicVo.setSysNumber(part.getNumber());
 						dynamicVo.setPartId(s.getPartId());
 						dynamicVo.setParts(s.getPart());

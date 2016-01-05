@@ -27,13 +27,13 @@
 			</div>
 			<div class="modal-body PrintArea">
 				<div class="control-group panel panel-info" style="width: 700px;">
-					<div class="panel-heading" style="text-align: center;"><H5>北京利华永文客户服务单</H5></div>
+					<div class="panel-heading" style="text-align: center;height: 40px;"><H6>北京利华永文客户服务单</H6></div>
 						<table class="table	table-bordered table-condensed" style="width: 100%;">
 							<tbody>
 								<tr>
 									<td class="success" width="20%">维修单号:</td>
-									<td align="left" width="30%"><input name="orders" value="${t.orders}" class="input-control" id="_orders" readonly="readonly"></td>
-									<td class="success" width="20%">项目:</td>
+									<td align="left" ><input name="orders" value="${t.orders}" class="input-control" id="_orders" readonly="readonly"></td>
+									<td class="success" width="19%">项目:</td>
 									<td align="left">
 										<select name="projectIdFk" id="_projectIdFk" disabled="disabled">
 											<c:forEach items="${projects }" var="p">
@@ -45,75 +45,75 @@
 								<tr>
 									<td width="20%">CallNo:</td>
 									<td align="left"><input name="callno" value="${t.callno}" class="input-control" id="_callno" readonly="readonly"></td>
-									<td width="30%">产品服务机构:</td>
+									<td width="19%">产品服务机构:</td>
 									<td align="left">利华永文笔记本服务中心</td>
 								</tr>
 								<tr>
-									<td class="success" width="30%">联系电话:</td>
+									<td class="success" width="20%">联系电话:</td>
 									<td align="left">01081725838</td>
-									<td class="success" width="30%">服务地址:</td>
+									<td class="success" width="19%">服务地址:</td>
 									<td align="left">北京回龙观同城街41-09</td>
 								
 								</tr>
 								<tr>
-									<td width="30%"><span class="glyphicon glyphicon-asterisk" style="color: RGB(194,31,8)"></span>客户姓名:</td>
+									<td width="20%"><span class="glyphicon glyphicon-asterisk" style="color: RGB(194,31,8)"></span>客户姓名:</td>
 									<td align="left"><input name="cusName" value="${t.cusName}" class="input-control" id="_cusName" readonly="readonly"></td>
-									<td width="30%"><span class="glyphicon glyphicon-asterisk" style="color: RGB(194,31,8)"></span>联系电话:</td>
+									<td width="19%"><span class="glyphicon glyphicon-asterisk" style="color: RGB(194,31,8)"></span>联系电话:</td>
 									<td align="left"><input name="cusTel" value="${t.cusTel}" class="input-control" id="_cusTel" readonly="readonly"></td>
 								</tr>
 								<tr>
-									<td class="success" width="30%"><span class="glyphicon glyphicon-asterisk" style="color: RGB(194,31,8)"></span>机器序列号:</td>
+									<td class="success" width="20%"><span class="glyphicon glyphicon-asterisk" style="color: RGB(194,31,8)"></span>机器序列号:</td>
 									<td align="left"><input name="hostNumber" value="${t.hostNumber}" class="input-control" id="_hostNumber" readonly="readonly"></td>
-									<td class="success" width="30%"></td>
+									<td class="success" width="19%"></td>
 									<td align="left"></td>
 								</tr>
 								<tr>
-									<td width="30%">产品标准配置(选填)</td>
-									<td align="left"></td>
-									<td width="30%"></td>
+									<td width="20%" colspan="2">产品标准配置(选填)</td>
+
+									<td width="19%"></td>
 									<td align="left"></td>
 								</tr>
 								<tr>
-									<td width="30%" class="success">主板:</td>
+									<td width="20%" class="success">主板:</td>
 									<td align="left"><input name="board" value="${t.board}" class="input-control" id="_board" readonly="readonly"></td>
-									<td width="30%" class="success">内存:</td>
+									<td width="19%" class="success">内存:</td>
 									<td align="left"><input name="memory" value="${t.memory}" class="input-control" id="_memory" readonly="readonly"></td>
 								</tr>
 								<tr>
-									<td width="30%">键盘:</td>
+									<td width="20%">键盘:</td>
 									<td align="left"><input name="keyboard" value="${t.keyboard}" class="input-control" id="_keyboard" readonly="readonly"></td>
-									<td width="30%">AC电源:</td>
+									<td width="19%">AC电源:</td>
 									<td align="left"><input name="ac" value="${t.ac}" class="input-control" id="_ac" readonly="readonly"></td>
 								</tr>
 								<tr>
-									<td width="30%" class="success">硬盘:</td>
+									<td width="20%" class="success">硬盘:</td>
 									<td align="left"><input name="hardDisk" value="${t.hardDisk}" class="input-control" id="_hardDisk" readonly="readonly"></td>
-									<td width="30%" class="success">外观:</td>
+									<td width="19%" class="success">外观:</td>
 									<td align="left"><input name="appearance" value="${t.appearance}" class="input-control" id="_appearance" readonly="readonly"></td>
 								</tr>
 								<tr>
-									<td width="30%">电池:</td>
+									<td width="20%">电池:</td>
 									<td align="left"><input name="battery" value="${t.battery}" class="input-control" id="_battery" readonly="readonly"></td>
-									<td width="30%">其他:</td>
+									<td width="19%">其他:</td>
 									<td align="left"><input name="other" value="${t.other}" class="input-control" id="_other" readonly="readonly"></td>
 								</tr>
 								<tr>
-									<td>报修故障:</td>
-									<td colspan="3" align="left"><textarea rows="2" cols="80" name="repairFault" id="_repairFault" readonly="readonly">${t.repairFault }</textarea></td>
-								</tr>
-								<tr>
-									<td width="100%" colspan="4">
+									<td width="20%">报修故障:</td>
+									<td align="left"><textarea rows="2" cols="30" name="repairFault" id="_repairFault" readonly="readonly">${t.repairFault }</textarea></td>
+
+									<td colspan="2">
 									<div style="float: left;padding-left: 20px;">保留硬盘数据:
 										<input type="checkbox" name="keepDiskDate" value="1" <c:if test='${t.keepDiskDate=="1"}'>checked="checked"</c:if> disabled="disabled"> 是
 										<input type="checkbox" name="keepDiskDate" value="0" <c:if test='${t.keepDiskDate=="0"}'>checked="checked"</c:if> disabled="disabled"> 否
 									</div>
-									<div style="padding-right: 50px;text-align: right;">接收人:<input style="border-color: #878787; border-style: solid; border-top-width: 0px;border-right-width: 0px; border-bottom-width: 1px;border-left-width: 0px" >&nbsp;&nbsp;用户送修签字:<input style="border-color: #878787; border-style: solid; border-top-width: 0px;border-right-width: 0px; border-bottom-width: 1px;border-left-width: 0px" ></div>
+										<br>
+									<div style="padding-left: 10px;text-align: left;">接收人:&nbsp;&nbsp;&nbsp;&nbsp;用户送修签字:</div>
 									</td>
 								</tr>
 								<tr>
-									<td width="30%" class="success">初检价格:</td>
+									<td width="20%" class="success">初检价格:</td>
 									<td align="left"><input class="input-control" id="_referencePrice" name="referencePrice" value="${t.referencePrice }" readonly="readonly"></td>
-									<td width="30%" class="success">日期:</td>
+									<td width="19%" class="success">日期:</td>
 									<td align="left"><input class="input-control" name="acceptDate" value="${t.acceptDate }" readonly="readonly"><span class="glyphicon glyphicon-calendar"></span></td>
 								</tr>
 								<tr>
@@ -135,16 +135,16 @@
 									</td>
 								</tr>
 								<tr>
-									<td align="left">备    注:</td>
-									<td colspan="3" align="left"><textarea rows="2" cols="80" name="faultHandlingRemark" id="_faultHandlingRemark" readonly="readonly">${t.faultHandlingRemark }</textarea></td>
-								</tr>
-								<tr id="i1">
-									<td colspan="4" class="success" align="left">故障类型: <input type="checkbox" disabled="disabled" name="_faultType" value="SOFT" <c:if test='${t.faultType=="SOFT"}'> checked="checked"</c:if>>软件服务 <input disabled="disabled" type="checkbox" name="_faultType" value="HARD" <c:if test='${t.faultType=="HARD"}'> checked="checked"</c:if>> 硬件服务<input type="hidden" name="faultType" value="${t.faultType }" id="faultType"><input type="checkbox" name="_faultType" value="SENCEND_REPER" <c:if test='${t.faultType=="SENCEND_REPER"}'> checked="checked"</c:if>>二级维修 </td>
+									<td align="left" width="20%">备    注:</td>
+									<td colspan="2" align="left"><textarea rows="2" cols="30" name="faultHandlingRemark" id="_faultHandlingRemark" readonly="readonly">${t.faultHandlingRemark }</textarea></td>
+
+
+									<td colspan="2" class="success" align="left">故障类型: <input type="checkbox" disabled="disabled" name="_faultType" value="SOFT" <c:if test='${t.faultType=="SOFT"}'> checked="checked"</c:if>>软件服务 <input disabled="disabled" type="checkbox" name="_faultType" value="HARD" <c:if test='${t.faultType=="HARD"}'> checked="checked"</c:if>> 硬件服务<input type="hidden" name="faultType" value="${t.faultType }" id="faultType"><input type="checkbox" name="_faultType" value="SENCEND_REPER" <c:if test='${t.faultType=="SENCEND_REPER"}'> checked="checked"</c:if>>二级维修 </td>
 								</tr>
 								<!-- 硬件开始 -->
 								<tr class="parts_tr">
-									<td width="5%"><span class="glyphicon glyphicon-asterisk" style="color: RGB(194,31,8)"></span>服务站:</td>
-									<td align="left" width="10%">
+									<td width="20%"><span class="glyphicon glyphicon-asterisk" style="color: RGB(194,31,8)"></span>服务站:</td>
+									<td align="left" >
 										<select name="stationId" id="_stationId" disabled="disabled">
 											<option value=""></option>
 											<c:forEach items="${stations }" var="s">
@@ -152,24 +152,24 @@
 											</c:forEach>
 										</select>
 									</td>
-									<td ><span class="glyphicon glyphicon-asterisk" style="color: RGB(194,31,8)"></span>申请时间:</td>
+									<td width="19%"><span class="glyphicon glyphicon-asterisk" style="color: RGB(194,31,8)"></span>申请时间:</td>
 									<td align="left"><input name="applyDate" disabled="disabled" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',maxDate:'%y-%M-%d'})"  value="${tt.applyDate}" class="input-control" id="_appr_Date" ><span class="glyphicon glyphicon-calendar"></span></td>
 								</tr>
 								<tr class="parts_tr">
-									<td  class="success"><span class="glyphicon glyphicon-asterisk" style="color: RGB(194,31,8)"></span>机器型号:</td>
+									<td  width="20%" class="success"><span class="glyphicon glyphicon-asterisk" style="color: RGB(194,31,8)"></span>机器型号:</td>
 									<td align="left"><input name="machineModel" disabled="disabled" value="${tt.machineModel}" class="input-control" id="_machineModel" onblur="this.value=this.value.toUpperCase()"></td>
-									<td   class="success"><span class="glyphicon glyphicon-asterisk" style="color: RGB(194,31,8)"></span>机器序列号:</td>
+									<td width="19%"  class="success"><span class="glyphicon glyphicon-asterisk" style="color: RGB(194,31,8)"></span>机器序列号:</td>
 									<td align="left"><input name="serialNumber" disabled="disabled" value="${tt.serialNumber}" class="input-control" id="_serial" >
 										<input name="returnFlag" value="0" class="input-control" id="_serial" type="hidden">
 									</td>
 								</tr>
 								<tr class="parts_tr">
-									<td ><span class="glyphicon glyphicon-asterisk" style="color: RGB(194,31,8)"></span>申请备件号:</td>
+									<td width="20%"><span class="glyphicon glyphicon-asterisk" style="color: RGB(194,31,8)"></span>申请备件号:</td>
 									<td align="left">
 										<input id="_app_partNo" disabled="disabled" class="input-control" onblur="this.value=this.value.toUpperCase()" value="${tt.applyParts }">
 										<input name="app_partId" id="_app_partId" type="hidden" disabled="disabled" value="${tt.applyPartsId }">
 									</td>
-									<td >备件名称:</td>
+									<td width="19%">备件名称:</td>
 									<td align="left">
 									<input disabled="disabled" class="input-control" id="_partName" readonly="readonly" value="${PARTS[tt.applyPartsId].name}">
 									</td>
@@ -178,18 +178,17 @@
 								<tr id="i0">
 									<td colspan="4" align="left">检验费:<input class="input-control" name="inspectionFee" id="_inspectionFee" value="${t.inspectionFee }"></td>
 								</tr>-->
-								<tr id="i2">
-									<td align="left">处理描述: </td>
-									<td colspan="3" align="left"><textarea rows="2" readonly="readonly" cols="80" name="processDes" id="_processDes">${t.processDes }</textarea></td>
-								</tr>
 								<tr id="i3">
+									<td width="20%" align="left">处理描述: </td>
+									<td align="left"><textarea rows="2" readonly="readonly" cols="30" name="processDes" id="_processDes">${t.processDes }</textarea></td>
+
 									<td align="left" class="success" >费用: </td>
-									<td colspan="3" style="text-align:left;"><input size="80" readonly="readonly" name="processCost" id="_processCost" value="${t.processCost }"><b style="font-size: 20;">RMB</b></td>
+									<td style="text-align:left;"><input size="20" readonly="readonly" name="processCost" id="_processCost" value="${t.processCost }"><b style="font-size: 20;">RMB</b></td>
 								</tr>
 								<tr id="i5">
-									<td width="80%" colspan="4">
+									<td colspan="4">
 										<div style="float: left;padding-left: 5px;">维修工程师:<input style="border-color: #878787; border-style: solid; border-top-width: 0px;border-right-width: 0px; border-bottom-width: 1px;border-left-width: 0px" size="10" ></div>
-										<div style="float: left;padding-left: 80px;">用户取机签字:<input style="border-color: #878787; border-style: solid; border-top-width: 0px;border-right-width: 0px; border-bottom-width: 1px;border-left-width: 0px" size="10"></div>
+										<div style="float: left;padding-left: 10px;">用户取机签字:<input style="border-color: #878787; border-style: solid; border-top-width: 0px;border-right-width: 0px; border-bottom-width: 1px;border-left-width: 0px" size="10"></div>
 										<div style="float: right" >日期:<input name="repairDate" class="input-control"  value="${t.repairDate }" readonly="readonly"><span class="glyphicon glyphicon-calendar"></span></div>
 									</td>
 								</tr>
@@ -199,7 +198,7 @@
 										</td>
 								</tr>-->
 								<tr>
-									<td width="30%">用户反馈信息:</td>
+									<td width="20%">用户反馈信息:</td>
 									<td align="left">
 										<div>
 											维修后的机器工作是否属于正常<br>
@@ -210,12 +209,12 @@
 											2.请您确认机器的附件是否已交付
 										</div>
 									</td>
-									<td width="30%" colspan="2">
+									<td width="19%" colspan="2">
 										<div style="text-align: left;">
 											欢迎您留下对我们服务的宝贵意见:<br>
 											<input type="checkbox" value="1" disabled="disabled" <c:if test='${"1"==t.advice }'>checked="checked"</c:if>>非常满意<input type="checkbox" value="2" disabled="disabled" <c:if test='${"2"==t.advice }'>checked="checked"</c:if>>满意<input type="checkbox" value="3" disabled="disabled" <c:if test='${"3"==t.advice }'>checked="checked"</c:if>>一般<input type="checkbox" value="4" disabled="disabled" <c:if test='${"4"==t.advice }'>checked="checked"</c:if>>不满意<input type="checkbox" value="5" disabled="disabled" <c:if test='${"5"==t.advice }'>checked="checked"</c:if>>很不满意
 											<br>
-											不满意原因及其他建议:<textarea rows="2" cols="50" disabled="disabled" name="opinion" id="_opinion">${t.opinion }</textarea>
+											不满意原因及其他建议:<textarea rows="2" cols="30" disabled="disabled" name="opinion" id="_opinion">${t.opinion }</textarea>
 											<br>
 											反馈信息和评价是用户签字时必填项,如果寄修服务可不填.
 											<br>
