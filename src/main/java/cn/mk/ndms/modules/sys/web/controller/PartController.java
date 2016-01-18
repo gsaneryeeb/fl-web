@@ -199,7 +199,7 @@ public class PartController extends GenericCRUDController<Part, String>
 						}
 					}
 				}
-				return AjaxBean.getInstance("error","不是FRU!");
+				return AjaxBean.getInstance("error","不是FRU!"); // 实际返件必须是申请备件自身或替代备件。
 			}else{
 				return AjaxBean.getInstance("error","无此备件!");
 			}

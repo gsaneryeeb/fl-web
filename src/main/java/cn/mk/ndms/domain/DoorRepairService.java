@@ -59,7 +59,7 @@ public class DoorRepairService extends BaseEntity<String>  {
 	private String returnFlag;			//是否需要返件
 	private String isReturn;			//是否已返备件
 	private Double inspectionFee;		//检验费
-	private String feedback;				//反馈是否正常
+	private String feedback;			//反馈是否正常
 	private String advice;				//意见
 	private String opinion;				//建议
 	

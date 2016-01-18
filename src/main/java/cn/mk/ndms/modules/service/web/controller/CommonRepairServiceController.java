@@ -485,8 +485,8 @@ public class CommonRepairServiceController extends GenericCRUDController<CommonR
 						cr.setAllocateEngineer(t.getAllocateEngineer());
 						cr.setServiceNo(t.getServiceNo());
 						cr.setFault(t.getFault());
-						cr.setFaultRemark(t.getFaultRemark());
-						cr.setSolutionTime(t.getSolutionTime());
+						cr.setFaultRemark(tt.getFaultRemark());
+						cr.setSolutionTime(tt.getSolutionTime());
 						CommonRepairService c=commonRepairServiceService.save(cr);
 						Outbound ob=new Outbound();
 						ob.setReturnFlag(t.getReturnFlag());
