@@ -217,6 +217,7 @@ public class DoorRepairServiceController extends GenericCRUDController<DoorRepai
 			t.setFirstDate(date);
 			t.setStatus(Constants.NUMBER_SIGN_0);
 			t.setFinishStatus(Constants.NUMBER_SIGN_0);
+
 			if(t.getFaultHandling()==null){
 				t.setFaultType(null);
 				t.setProcessDes(null);
@@ -322,6 +323,7 @@ public class DoorRepairServiceController extends GenericCRUDController<DoorRepai
 			t.setFaultType(tt.getFaultType());
 			t.setReturnFlag(tt.getReturnFlag());
 			t.setIsReturn(tt.getIsReturn());
+			t.setFaultHandlingRemark(t.getFaultHandlingRemark());
 			if(t.getFaultHandling()==null){
 				t.setProcessDes(null);
 				t.setProcessCost(null);
@@ -349,19 +351,19 @@ public class DoorRepairServiceController extends GenericCRUDController<DoorRepai
 							t.setStatus(Constants.NUMBER_SIGN_6);
 							if(t.getNeedPart()!=null && Constants.NUMBER_SIGN_1.equals(t.getNeedPart().toString())){
 								t.setStatus(Constants.NUMBER_SIGN_3);
-								if(t.getProcessCost()!=null && t.getProcessCost().doubleValue()>0){
+								if(t.getProcessCost()!=null && t.getProcessCost().doubleValue()>=0){
 									t.setStatus(Constants.NUMBER_SIGN_4);
 								}
 							}
 						}else{
 							t.setStatus(Constants.NUMBER_SIGN_5);
-							if(t.getProcessCost()!=null && t.getProcessCost().doubleValue()>0){
+							if(t.getProcessCost()!=null && t.getProcessCost().doubleValue()>=0){
 								t.setStatus(Constants.NUMBER_SIGN_4);
 							}
 						}
 					}else{
 						t.setStatus(Constants.NUMBER_SIGN_5);
-						if(t.getProcessCost()!=null && t.getProcessCost().doubleValue()>0){
+						if(t.getProcessCost()!=null && t.getProcessCost().doubleValue()>=0){
 							t.setStatus(Constants.NUMBER_SIGN_4);
 						}
 					}

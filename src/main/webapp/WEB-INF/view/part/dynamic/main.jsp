@@ -7,6 +7,9 @@
 	var vl=true;
 	$(function(){
 		$("#printBtn").click(function(){
+			$(".PrintArea").printArea();
+		});
+		/** $("#printBtn").click(function(){
 			if(vl){
 				$.ajax({
 					type : "POST",
@@ -39,7 +42,7 @@
 			}else{
 				$(".PrintArea").printArea();
 			}
-		});
+		}); */
 		$("#saveCycle").click(function(){
 			vl=false;
 			$.ajax({

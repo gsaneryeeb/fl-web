@@ -316,7 +316,7 @@ public class CommonRepairServiceController extends GenericCRUDController<CommonR
 		}
 	}
 	
-	
+	//验证重维
 	@RequestMapping(value="checkRepeatsAjax")
 	@ResponseBody
 	public AjaxBean checkRepeatsAjax(@RequestParam(value="ids") String[] ids){
@@ -339,6 +339,14 @@ public class CommonRepairServiceController extends GenericCRUDController<CommonR
 					calendar.add(Calendar.DATE, -90);
 					Date maxDate =calendar.getTime();
 					System.out.println(sdf.format(minDate)+"  "+sdf.format(maxDate));
+
+					/*重复维修查询条件
+					id<>?
+					MACHINE_MODEL=?
+					SERIAL_NUMBER=?
+					APPLY_PARTS_ID=?
+					APPLY_DATE>=?
+					APPLY_DATE<=?*/
 					List<CommonRepairService> list=commonRepairServiceService.findByMachineAndSerialAndMinDateAndMaxDate(service.getId(),machine,serialNumber,partId,sdf.format(maxDate),sdf.format(minDate));
 					if(list!=null && !list.isEmpty()){
 						bl=true;

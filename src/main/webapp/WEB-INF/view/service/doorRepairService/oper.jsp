@@ -302,7 +302,7 @@
 								</tr>
 								<tr>
 									<td align="left" width="20%">备    注:</td>
-									<td align="left"><textarea rows="2" cols="30" cname="faultHandlingRemark" id="_faultHandlingRemark">${t.faultHandlingRemark }</textarea></td>
+									<td align="left"><textarea rows="2" cols="30" name="faultHandlingRemark" id="_faultHandlingRemark">${t.faultHandlingRemark }</textarea></td>
 
 
 									<td colspan="2" align="left">故障处理: <input type="checkbox" name="_faultHandling" value="1" <c:if test='${t.faultHandling==1}'> checked="checked"</c:if>>已修复 <input type="checkbox" name="_faultHandling" value="2" <c:if test='${t.faultHandling==2}'> checked="checked"</c:if>> 未修复 <input type="checkbox" name="_faultHandling" value="3" <c:if test='${t.faultHandling==3}'> checked="checked"</c:if>>客户放弃维修 <input type="hidden" name="faultHandling" value="${t.faultHandling }" id="faultHandling"> </td>

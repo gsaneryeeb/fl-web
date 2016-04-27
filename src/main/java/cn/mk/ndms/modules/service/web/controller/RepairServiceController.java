@@ -301,6 +301,7 @@ public class RepairServiceController extends GenericCRUDController<RepairService
 	@ResponseBody
 	public AjaxBean updateAjaxs(RepairService t,HttpServletRequest request,@RequestParam(value="finishFlag") String finishFlag){
 		try{
+			// 工程师保存 flag = 1
 			User user=(User)request.getSession().getAttribute("USER");
 			String date=DateTool.longFormat(new Date());
 			if(Constants.NUMBER_SIGN_1.equals(finishFlag)){
@@ -311,6 +312,7 @@ public class RepairServiceController extends GenericCRUDController<RepairService
 					t.setStatus(Constants.NUMBER_SIGN_2);
 				}
 				if(StringUtils.isNotEmpty(t.getSurveyorDate()) && StringUtils.isNotEmpty(t.getFaultReason()) && Constants.NUMBER_SIGN_2.equals(t.getStatus())){
+					//进入下一流程，Dell 协调。
 					t.setStatus(Constants.NUMBER_SIGN_3);
 					t.setSurveyor(user.getuName());
 //					t.setSurveyorDate(date);
