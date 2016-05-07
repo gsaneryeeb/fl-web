@@ -228,12 +228,15 @@ public class DoorRepairServiceController extends GenericCRUDController<DoorRepai
 			}else{
 				if(Constants.NUMBER_SIGN_2.equals(t.getFaultHandling().toString())){
 					t.setStatus(Constants.NUMBER_SIGN_2);
+					/*
+					* 2016/5/8 修改未修复时，如下各列不清空。
 					t.setFaultType(null);
 					t.setProcessDes(null);
 					t.setProcessCost(null);
 					t.setRepairPersonId(null);
 					t.setRepairRersonName(null);
 					t.setRepairDate(null);
+					*/
 				}else if(Constants.NUMBER_SIGN_3.equals(t.getFaultHandling().toString())){
 					t.setStatus(Constants.NUMBER_SIGN__2);
 					t.setFaultType(null);
@@ -332,12 +335,16 @@ public class DoorRepairServiceController extends GenericCRUDController<DoorRepai
 				t.setRepairDate(null);
 			}else{
 				if(Constants.NUMBER_SIGN_2.equals(t.getFaultHandling().toString())){
+					//未修复
 					t.setStatus(Constants.NUMBER_SIGN_2);
+					/*
+					* 2016/5/8 修改未修复时如下各列不清空。
 					t.setProcessDes(null);
 					t.setProcessCost(null);
 					t.setRepairPersonId(null);
 					t.setRepairRersonName(null);
 					t.setRepairDate(null);
+					*/
 				}else if(Constants.NUMBER_SIGN_3.equals(t.getFaultHandling().toString())){
 					t.setStatus(Constants.NUMBER_SIGN__2);
 					t.setProcessDes(null);

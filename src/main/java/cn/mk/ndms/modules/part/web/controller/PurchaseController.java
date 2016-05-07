@@ -157,7 +157,8 @@ public class PurchaseController extends GenericCRUDController<Storage, String>
 			return AjaxBean.getInstance("error",ex.getMessage());
 		}
 	}
-	
+
+	//采购新增
 	@RequestMapping(value="bachSave")
 	@ResponseBody
 	public AjaxBean bachSaveAjax(HttpServletRequest request,@RequestParam(value="partses") String[] partses,
@@ -179,6 +180,11 @@ public class PurchaseController extends GenericCRUDController<Storage, String>
 					tt.setSupplierId(supplierIds[i]);
 					Supiro supiro=supiroService.findOne(supplierIds[i]);
 					tt.setSupplierName(supiro.getName());
+					//添加 WAC 货架号
+					Part part=partService.findOne(partIds[i]);
+					tt.setWac(part.getWac());
+					tt.setShelfNo(part.getRack());
+					// WAC 货架号 end
 					tt.setPartId(partIds[i]);
 					tt.setPart(partses[i]);
 					tt.setPartName(partNames[i]);
