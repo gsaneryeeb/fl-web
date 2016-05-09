@@ -264,7 +264,7 @@
 				<td>${t.number}</td>
 				<td>${t.price }</td>
 				<td>${t.ordersDate }</td>
-				<td>${t.total }</td>
+				<td>${t.total}</td>
 				<td>${sources[t.source]}</td>
 				<td>${t.inOrder }</td>
 				<!-- <td>${t.expressFree }</td> -->

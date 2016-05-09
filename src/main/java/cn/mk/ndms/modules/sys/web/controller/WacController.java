@@ -1,5 +1,6 @@
 package cn.mk.ndms.modules.sys.web.controller;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -59,6 +60,8 @@ public class WacController extends GenericCRUDController<Wac, String>
 				int maxDay= cal.getActualMaximum(Calendar.DAY_OF_MONTH);
 				int day = cal.get(Calendar.DAY_OF_MONTH);//月
 				boolean bl=false;
+				DecimalFormat df = new DecimalFormat("#.00");
+				//System.out.println(df.format(f))；
 				if(wacList!=null && !wacList.isEmpty()){
 					Wac w=wacList.get(0);
 					if(w.getYears().equals(String.valueOf(year))){
@@ -83,7 +86,10 @@ public class WacController extends GenericCRUDController<Wac, String>
 						wac.setYears(String.valueOf(year));
 						wac.setPartId(_p.getId());
 						wac.setPartNo(_p.getNo());
-						wac.setPrice(_p.getPrice());
+						//保留两位小数
+						Double wacPrice =_p.getPrice();
+						wacPrice = Double.valueOf(df.format(wacPrice));
+						wac.setPrice(wacPrice);
 						wac.setDays(Constants.NUMBER_SIGN_1);
 						List<Storage> storageList=storageService.findByPartId(_p.getId());
 						if(storageList!=null && !storageList.isEmpty()){
@@ -93,15 +99,19 @@ public class WacController extends GenericCRUDController<Wac, String>
 								total=total+(s.getTotal()==null?0:s.getTotal());
 								num=num+(s.getNumber()==null?0:s.getNumber());
 							}
-							Double wacPrice=_p.getPrice();
+							wacPrice=_p.getPrice();
 							wacPrice = total/num;
+							//保留两位小数
+							wacPrice = Double.valueOf(df.format(wacPrice));
 //							if(total!=0){
 //								wacPrice=(total/num)*Constants.wac_per;
 //							}
 							wac.setWac(wacPrice);
 							_p.setWac(wacPrice);
 						}else{
-							Double wacPrice=_p.getPrice();
+							wacPrice=_p.getPrice();
+							//保留两位小数
+							wacPrice = Double.valueOf(df.format(wacPrice));
 							wac.setWac(wacPrice);
 						}
 						_partList.add(_p);

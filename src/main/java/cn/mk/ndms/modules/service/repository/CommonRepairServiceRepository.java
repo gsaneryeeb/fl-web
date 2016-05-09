@@ -27,7 +27,15 @@ public interface CommonRepairServiceRepository extends GenericRepository<CommonR
 	
 	@Query("from CommonRepairService c where c.status='-2' and c.callno like %?1% and c.station like %?2% and c.allocateEngineerId=?3")
 	public Page<CommonRepairService> findPageBySearchs(Pageable pageable,String search_LIKE_callno,String search_LIKE_station,String userId);
-	
+
+	/*
 	@Query("from CommonRepairService c where c.id!=?1 and c.machineModel=?2 and c.serialNumber=?3 and c.applyPartsId =?4 and c.applyDate>=?5 and c.applyDate<=?6")
 	public List<CommonRepairService> findByMachineAndSerialAndMinDateAndMaxDate(String id,String machine,String serialNumber,String partId,String minDate,String maxDate);
+	*/
+	/*
+	*修改重复维修判断条件为 按照服务解决时间
+	 */
+	@Query("from CommonRepairService c where c.id!=?1 and c.machineModel=?2 and c.serialNumber=?3 and c.applyPartsId =?4 and c.solutionTime>=?5 and c.solutionTime<=?6")
+	public List<CommonRepairService> findByMachineAndSerialAndMinDateAndMaxDate(String id,String machine,String serialNumber,String partId,String minDate,String maxDate);
+
 }
